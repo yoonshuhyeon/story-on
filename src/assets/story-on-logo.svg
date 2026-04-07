@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" role="img" aria-label="story on logo">
+  <defs>
+    <linearGradient id="storyon-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="var(--accent-primary)" />
+      <stop offset="100%" stop-color="var(--accent-secondary)" />
+    </linearGradient>
+  </defs>
+
+  <!-- Mark: power-on inspired ring -->
+  <g transform="translate(4,4)">
+    <circle cx="16" cy="16" r="14" fill="none" stroke="url(#storyon-grad)" stroke-width="3" />
+    <path d="M16 4.5v8" fill="none" stroke="url(#storyon-grad)" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(44,0)" font-family="Outfit, Pretendard, system-ui, -apple-system, Segoe UI, sans-serif">
+    <text x="0" y="24" font-size="22" font-weight="800" letter-spacing="-0.6" fill="var(--text-primary)">story</text>
+
+    <!-- ON pill -->
+    <g transform="translate(86,10)">
+      <rect x="0" y="0" width="56" height="22" rx="11" fill="url(#storyon-grad)" />
+      <text x="28" y="15" font-size="13" font-weight="800" text-anchor="middle" dominant-baseline="middle" fill="#ffffff" letter-spacing="0.8">ON</text>
+    </g>
+  </g>
+</svg>

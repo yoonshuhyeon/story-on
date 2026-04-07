@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { FolderHeart, Zap } from 'lucide-react';
+import { FolderHeart } from 'lucide-react';
 import Home from './pages/Home';
 import Main from './pages/Main';
 import CCAI from './pages/CCAI';
 import SCSAI from './pages/SCSAI';
 import ETC from './pages/ETC';
 import StudioDrawer from './components/StudioDrawer';
+import StoryOnLogo from './components/StoryOnLogo';
 
 const NavLinks = () => {
   const location = useLocation();
@@ -38,8 +39,7 @@ const Header = ({ onOpenStudio }) => {
     <header className="header-nav glass-panel" style={{ borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}>
       <div className="logo-container">
         <Link to="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <Zap size={24} color="var(--accent-primary)" />
-          <span className="gradient-text">Story-On</span>
+          <StoryOnLogo height={26} title="story on" />
         </Link>
       </div>
       
