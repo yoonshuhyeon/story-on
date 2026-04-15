@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Color Palette - Premium Dark Theme */
-  --bg-base: #0f1115;
-  --bg-surface: #1a1d24;
-  --bg-surface-glass: rgba(26, 29, 36, 0.6);
-  --bg-elevated: #252932;
-  --text-primary: #f0f2f5;
-  --text-secondary: #a1a5b8;
-  --accent-primary: #fe4a90; /* Vibrant Pink/Red */
-  --accent-secondary: #605bff; /* Deep Violet/Blue */
-  --accent-tertiary: #00d2ff; /* Neon Cyan */
+  /* Color Palette - Light Theme */
+  --bg-base: #ffffff;
+  --bg-surface: #f8f9fa;
+  --bg-surface-glass: rgba(248, 249, 250, 0.8);
+  --bg-elevated: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --accent-primary: #ff7f50; /* Vibrant Orange */
+  --accent-secondary: #ff9500; /* Deep Orange */
+  --accent-tertiary: #ffb347; /* Light Orange */
   
   --gradient-main: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
   --gradient-scs: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-tertiary) 100%);
-  --gradient-glow: linear-gradient(90deg, #fe4a90, #605bff, #00d2ff, #fe4a90);
+  --gradient-glow: linear-gradient(90deg, #ff7f50, #ff9500, #ffb347, #ff7f50);
   
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-glass: rgba(255, 255, 255, 0.15);
@@ -27,7 +27,7 @@
   
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(96, 91, 255, 0.4);
+  --shadow-glow: 0 0 20px rgba(255, 149, 0, 0.4);
   
   /* Layout */
   --header-height: 80px;
