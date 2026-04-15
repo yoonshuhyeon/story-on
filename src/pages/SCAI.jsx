@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Route, Save, Dna } from 'lucide-react';
 
-const SCSAI = () => {
+const SCAI = () => {
   return (
     <div className="page-wrapper">
-      <h1 className="gradient-text" style={{ marginBottom: '0.5rem', backgroundImage: 'var(--gradient-scs)' }}>Scenario Choice AI</h1>
+      <h1 style={{ marginBottom: '0.5rem', color: 'rgb(233, 169, 68)' }}>Scenario Choice AI</h1>
       <p style={{ marginBottom: '2rem' }}>현재 상황에서 뻗어나갈 수 있는 무한한 스토리 분기를 확인하세요.</p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -20,7 +20,7 @@ const SCSAI = () => {
           ></textarea>
           
           <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1rem' }}>
-            <button className="btn-primary" style={{ background: 'var(--gradient-scs)' }}>
+            <button className="btn-primary" style={{ background: 'linear-gradient(135deg, rgb(208, 97, 69), rgb(233, 169, 68))' }}>
               <Dna size={18} /> 시나리오 분기 생성을 위한 분석
             </button>
           </div>
@@ -78,4 +78,4 @@ const SCSAI = () => {
   );
 };
 
-export default SCSAI;
+export default SCAI;

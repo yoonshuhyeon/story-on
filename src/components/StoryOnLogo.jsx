@@ -1,69 +1,49 @@
 import React from 'react';
 
-export default function StoryOnLogo({
-  height = 24,
-  className,
-  title = 'story on',
-  showWordmark = true,
-}) {
-  const width = showWordmark ? Math.round((240 / 40) * height) : height;
+const LogoSymbol = ({ size = 64, style }) => (
+  <svg 
+    width={size * 1.3} 
+    height={size * 1.0} 
+    viewBox="0 0 110 80" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    style={style}
+  >
+    <g stroke="currentColor" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M 44 25 L 20 25 C 2 25, 2 45, 20 45 L 38 45 C 54 45, 54 65, 38 65 L 14 65" />
+      <path d="M 99 31 A 20 20 0 1 1 71 31" />
+      <path d="M 85 16 L 85 41" />
+    </g>
+  </svg>
+);
 
+const PowerButtonO = ({ size = 28, style }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 40 40" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    style={style}
+  >
+    <g stroke="currentColor" strokeWidth="6" strokeLinecap="round">
+      <path d="M 30 10 A 14 14 0 1 1 10 10" />
+      <path d="M 20 2 L 20 18" />
+    </g>
+  </svg>
+);
+
+const StoryOnLogo = ({ size = 48, className = '' }) => {
   return (
-    <svg
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox={showWordmark ? '0 0 240 40' : '0 0 40 40'}
-      width={width}
-      height={height}
-      role="img"
-      aria-label={title}
-      focusable="false"
-    >
-      <defs>
-        <linearGradient id="storyon-grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="var(--accent-primary)" />
-          <stop offset="100%" stopColor="var(--accent-secondary)" />
-        </linearGradient>
-      </defs>
-
-      <g transform="translate(4,4)">
-        <circle cx="16" cy="16" r="14" fill="none" stroke="url(#storyon-grad)" strokeWidth="3" />
-        <path d="M16 4.5v8" fill="none" stroke="url(#storyon-grad)" strokeWidth="3" strokeLinecap="round" />
-      </g>
-
-      {showWordmark && (
-        <g
-          transform="translate(44,0)"
-          fontFamily="Outfit, Pretendard, system-ui, -apple-system, Segoe UI, sans-serif"
-        >
-          <text
-            x="0"
-            y="24"
-            fontSize="22"
-            fontWeight="800"
-            letterSpacing="-0.6"
-            fill="var(--text-primary)"
-          >
-            story
-          </text>
-
-          <g transform="translate(86,10)">
-            <rect x="0" y="0" width="56" height="22" rx="11" fill="url(#storyon-grad)" />
-            <text
-              x="28"
-              y="15"
-              fontSize="13"
-              fontWeight="800"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fill="#ffffff"
-              letterSpacing="0.8"
-            >
-              ON
-            </text>
-          </g>
-        </g>
-      )}
-    </svg>
+    <div className={`logo-wrapper ${className}`} style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+      <LogoSymbol size={size} style={{ color: 'var(--accent-primary)' }} />
+      <div style={{ display: 'flex', alignItems: 'center', fontSize: `${size * 0.7}px`, fontFamily: 'Outfit, sans-serif', paddingTop: '2px' }}>
+        <span style={{ color: 'var(--accent-tertiary)', fontWeight: '800', letterSpacing: '-0.3px' }}>Story-</span>
+        <PowerButtonO size={size * 0.65} style={{ color: 'var(--accent-primary)', marginLeft: '6px', marginRight: '1px', transform: 'translateY(-2px)' }} />
+        <span style={{ color: 'var(--accent-primary)', fontWeight: '800', letterSpacing: '-0.3px' }}>N</span>
+      </div>
+    </div>
   );
-}
+};
+
+export default StoryOnLogo;

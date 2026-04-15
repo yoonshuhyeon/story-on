@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { FolderHeart } from 'lucide-react';
+import { FolderHeart, Zap } from 'lucide-react';
+import logoImg from './logo.2.png';
 import Home from './pages/Home';
 import Main from './pages/Main';
 import CCAI from './pages/CCAI';
-import SCSAI from './pages/SCSAI';
+import SCAI from './pages/SCAI';
 import ETC from './pages/ETC';
 import StudioDrawer from './components/StudioDrawer';
-import StoryOnLogo from './components/StoryOnLogo';
 
 const NavLinks = () => {
   const location = useLocation();
@@ -15,7 +15,7 @@ const NavLinks = () => {
     { path: '/', label: 'Home' },
     { path: '/main', label: 'Main' },
     { path: '/cc-ai', label: 'CC AI' },
-    { path: '/scs-ai', label: 'SCS AI' },
+    { path: '/sc-ai', label: 'SC AI' },
     { path: '/etc', label: 'ETC' },
   ];
 
@@ -38,13 +38,13 @@ const Header = ({ onOpenStudio }) => {
   return (
     <header className="header-nav glass-panel" style={{ borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}>
       <div className="logo-container">
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <StoryOnLogo height={26} title="story on" />
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+          <img src={logoImg} alt="Story-On Logo" style={{ height: '56px', objectFit: 'contain' }} />
         </Link>
       </div>
-      
+
       <NavLinks />
-      
+
       <div>
         <button className="btn-glass" onClick={onOpenStudio}>
           <FolderHeart size={18} />
@@ -62,13 +62,13 @@ function App() {
     <BrowserRouter>
       <div className="app-container">
         <Header onOpenStudio={() => setIsStudioOpen(true)} />
-        
+
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/main" element={<Main />} />
             <Route path="/cc-ai" element={<CCAI />} />
-            <Route path="/scs-ai" element={<SCSAI />} />
+            <Route path="/sc-ai" element={<SCAI />} />
             <Route path="/etc" element={<ETC />} />
           </Routes>
         </main>
