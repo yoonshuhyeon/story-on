@@ -7,6 +7,7 @@ import Main from './pages/Main';
 import CCAI from './pages/CCAI';
 import SCAI from './pages/SCAI';
 import ETC from './pages/ETC';
+import Namer from './pages/Namer';
 import StudioDrawer from './components/StudioDrawer';
 
 const NavLinks = () => {
@@ -70,6 +71,7 @@ function App() {
             <Route path="/cc-ai" element={<CCAI />} />
             <Route path="/sc-ai" element={<SCAI />} />
             <Route path="/etc" element={<ETC />} />
+            <Route path="/etc/namer" element={<Namer />} />
           </Routes>
         </main>
 
