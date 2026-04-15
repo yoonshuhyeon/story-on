@@ -55,19 +55,19 @@ const Main = () => {
           </div>
         </motion.div>
 
-        {/* SCS AI Action Button */}
+        {/* SC AI Action Button */}
         <motion.div 
           variants={itemVariants}
           whileHover={{ scale: 1.03, y: -10 }}
           whileTap={{ scale: 0.98 }}
-          onClick={() => navigate('/scs-ai')}
-          style={{ flex: '1 1 300px', position: 'relative', cursor: 'pointer', borderRadius: 'var(--radius-lg)', padding: '3px', background: 'var(--gradient-scs)' }}
+          onClick={() => navigate('/sc-ai')}
+          style={{ flex: '1 1 300px', position: 'relative', cursor: 'pointer', borderRadius: 'var(--radius-lg)', padding: '3px', background: 'rgb(233, 169, 68)' }}
         >
           <div style={{ background: 'var(--bg-elevated)', borderRadius: 'calc(var(--radius-lg) - 3px)', height: '100%', padding: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              style={{ marginBottom: '1.5rem', color: 'var(--accent-secondary)' }}
+              style={{ marginBottom: '1.5rem', color: 'rgb(233, 169, 68)' }}
             >
               <Route size={64} />
             </motion.div>
@@ -85,13 +85,13 @@ const Main = () => {
           whileHover={{ scale: 1.03, y: -10 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => navigate('/etc')}
-          style={{ flex: '1 1 300px', position: 'relative', cursor: 'pointer', borderRadius: 'var(--radius-lg)', padding: '3px', background: 'var(--border-glass)' }}
+          style={{ flex: '1 1 300px', position: 'relative', cursor: 'pointer', borderRadius: 'var(--radius-lg)', padding: '3px', background: 'rgb(75, 78, 83)' }}
         >
           <div style={{ background: 'var(--bg-elevated)', borderRadius: 'calc(var(--radius-lg) - 3px)', height: '100%', padding: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <div style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
               <Layers size={64} />
             </div>
-            <h3 style={{ fontSize: '1.75rem', color: 'var(--text-secondary)' }}>기타 도구 (ETC)</h3>
+            <h3 style={{ fontSize: '1.75rem', color: '#000' }}>ETC Tools</h3>
             <p>보조적인 창작 도구들을 모아두었습니다.</p>
             <div style={{ marginTop: 'auto', paddingTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
               둘러보기 <ArrowRight size={18} />

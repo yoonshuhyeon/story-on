@@ -1,23 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Color Palette - Light Theme */
-  --bg-base: #ffffff;
-  --bg-surface: #f8f9fa;
-  --bg-surface-glass: rgba(248, 249, 250, 0.8);
+  /* Color Palette - Bright & Clean Light Theme matched to Logo */
+  --bg-base: #fafcff;
+  --bg-surface: #ffffff;
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
   --bg-elevated: #ffffff;
-  --text-primary: #212529;
-  --text-secondary: #6c757d;
-  --accent-primary: #ff7f50; /* Vibrant Orange */
-  --accent-secondary: #ff9500; /* Deep Orange */
-  --accent-tertiary: #ffb347; /* Light Orange */
+  
+  /* Text and Accents based on the logo */
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-primary: #F26F54; /* Logo Orange/Coral */
+  --accent-secondary: #e0583b; /* Darker Orange for hover/gradients */
+  --accent-tertiary: #4A4E54; /* Logo Dark Grey */
   
   --gradient-main: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  --gradient-scs: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-tertiary) 100%);
-  --gradient-glow: linear-gradient(90deg, #ff7f50, #ff9500, #ffb347, #ff7f50);
+  --gradient-sc: linear-gradient(135deg, var(--accent-tertiary) 0%, var(--accent-primary) 100%);
+  --gradient-glow: linear-gradient(90deg, #F26F54, #e0583b, #F26F54);
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-glass: rgba(255, 255, 255, 0.15);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-glass: rgba(0, 0, 0, 0.12);
   
   /* Radii & Shadows */
   --radius-sm: 8px;
@@ -25,9 +27,9 @@
   --radius-lg: 24px;
   --radius-pill: 9999px;
   
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(255, 149, 0, 0.4);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 20px rgba(242, 111, 84, 0.25);
   
   /* Layout */
   --header-height: 80px;
@@ -80,7 +82,7 @@ body {
 }
 
 .page-wrapper {
-  max-w-screen: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   width: 100%;
@@ -108,7 +110,7 @@ body {
 }
 
 .btn-glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.03);
   border: 1px solid var(--border-glass);
   color: var(--text-primary);
   border-radius: var(--radius-pill);
@@ -123,13 +125,13 @@ body {
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
 
 .input-field {
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.02);
   border: 1px solid var(--border-subtle);
   color: var(--text-primary);
   padding: 1rem;
@@ -137,13 +139,13 @@ body {
   width: 100%;
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, background 0.3s;
 }
 
 .input-field:focus {
   outline: none;
-  border-color: var(--accent-secondary);
-  background: rgba(0,0,0,0.3);
+  border-color: var(--accent-primary);
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .input-area {
